@@ -568,6 +568,13 @@ declare module 'sweetalert2' {
          * @default true
          */
         useRejections?: boolean;
+
+        /**
+         * Rotate 90 or not
+         *
+         * @default false
+         */
+        rotation?: boolean;
     }
 
     export default swal;

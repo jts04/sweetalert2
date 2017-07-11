@@ -55,7 +55,8 @@ var defaultParams = {
   progressStepsDistance: '40px',
   onOpen: null,
   onClose: null,
-  useRejections: true
+  useRejections: true,
+  rotation: false
 };
 
 var swalPrefix = 'swal2-';
@@ -480,6 +481,10 @@ var setParameters = function setParameters(params) {
 
   modal.style.padding = params.padding + 'px';
   modal.style.background = params.background;
+  if (params.rotation)
+  {
+    modal.style.transform = 'rotate(90deg)';
+  }
   var successIconParts = modal.querySelectorAll('[class^=swal2-success-circular-line], .swal2-success-fix');
   for (var i = 0; i < successIconParts.length; i++) {
     successIconParts[i].style.background = params.background;

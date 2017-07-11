@@ -24,6 +24,10 @@ const setParameters = (params) => {
 
   modal.style.padding = params.padding + 'px'
   modal.style.background = params.background
+  if (params.rotation)
+  {
+    modal.style.transform = 'rotate(90deg)'
+  }
   const successIconParts = modal.querySelectorAll('[class^=swal2-success-circular-line], .swal2-success-fix')
   for (let i = 0; i < successIconParts.length; i++) {
     successIconParts[i].style.background = params.background
