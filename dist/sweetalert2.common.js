@@ -472,15 +472,15 @@ var setParameters = function setParameters(params) {
     }
   }
 
+  if (params.rotation)
+  {
+    modal.style.transform = 'rotate(90deg)';
+  }
   // Set modal width
   modal.style.width = typeof params.width === 'number' ? params.width + 'px' : params.width;
 
   modal.style.padding = params.padding + 'px';
   modal.style.background = params.background;
-  if (params.rotation)
-  {
-    modal.style.transform = 'rotate(90deg)';
-  }
   var successIconParts = modal.querySelectorAll('[class^=swal2-success-circular-line], .swal2-success-fix');
   for (var i = 0; i < successIconParts.length; i++) {
     successIconParts[i].style.background = params.background;
